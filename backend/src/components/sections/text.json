@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_blocks_texts",
+  "info": {
+    "displayName": "text",
+    "icon": "book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "richtext"
+    }
+  }
+}

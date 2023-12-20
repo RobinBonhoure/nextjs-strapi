@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_item_estimateurs",
+  "info": {
+    "displayName": "itemEstimateur",
+    "icon": "puzzle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "inclus": {
+      "type": "boolean",
+      "default": false
+    },
+    "abonnement": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

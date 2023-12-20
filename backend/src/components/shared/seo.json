@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_seos",
+  "info": {
+    "displayName": "seo",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "metadescription": {
+      "type": "string"
+    },
+    "metatitle": {
+      "type": "string"
+    }
+  }
+}

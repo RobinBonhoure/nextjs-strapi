@@ -1,0 +1,116 @@
+.blocks-etapes {
+    container: blocks-etapes / inline-size;
+    position: relative;
+
+    h2 {
+        @extend .h2;
+    }
+
+    h3 {
+        @extend .h3;
+        line-height: 1.5;
+        margin-top: 20px;
+    }
+
+    h4 {
+        @extend .h4;
+    }
+
+    h2,
+    h3,
+    h4,
+    p {
+        text-align: center;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 60px;
+
+        @media screen and (min-width: $screen-md) {
+            display: grid;
+            justify-content: space-between;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            span,
+            figure {
+                display: flex;
+                width: 7rem;
+                height: 7rem;
+                border-radius: 100%;
+                margin-bottom: 2rem;
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $primary;
+                color: $blanc;
+                font-size: 4rem;
+            }
+
+            figure {
+                img {
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 100%;
+                    @media screen and (min-width:$screen-md) {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            h4 {
+                margin-bottom: 2rem;
+                @extend .h3;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@container blocks-etapes (width >=48rem) {
+    .blocks-etapes {
+        hgroup {
+            max-width: 60%;
+        }
+
+        h2,
+        h3,
+        h4,
+        p {
+            text-align: left;
+        }
+
+        &__content {
+            grid-template-columns: repeat(2, 1fr);
+
+            .item {
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                grid-column-gap: 3rem;
+                align-items: flex-start;
+
+                span,
+                figure {
+                    width: 100%;
+                    margin-bottom: 0;
+                    height: auto;
+                    aspect-ratio: 1 / 1;
+                }
+            }
+        }
+    }
+}

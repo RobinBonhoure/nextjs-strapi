@@ -1,0 +1,97 @@
+.blocks-estimateur {
+    position: relative;
+
+    hgroup {
+        @extend .simple-container;
+    }
+
+    h2,
+    h3,
+    h4,
+    p {
+        color: $blanc;
+    }
+
+    &__content {
+        @extend .simple-container;
+        margin-top: 80px;
+
+        .item {
+            &-title {
+                @include fluid-text(15px, 20px, 1, 991px, 1920px);
+                margin-top: 30px;
+            }
+            &-subtitle {
+                @include fluid-text(15px, 20px, 1, 991px, 1920px);
+                margin-top: 20px;
+                margin-bottom: 15px;
+            }
+        }
+
+        .subitems {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            @media screen and (max-width: $screen-md) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @media screen and (max-width: $screen-sm) {
+                grid-template-columns: 1fr 1fr;
+            }
+            @media screen and (max-width: $screen-xs) {
+                grid-template-columns: 1fr;
+            }
+        }
+        .subitem {
+            position: relative;
+            background-color: $tertiary;
+            padding: 10px;
+            border-radius: 15px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 15px;
+            min-height: 60px;
+            &.active,
+            &.inclus {
+                background-color: green;
+            }
+            &.inclus {
+                cursor: unset;
+            }
+            &-title {
+                @include fluid-text(12px, 18px, 1, 991px, 1920px);
+            }
+            &-description {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                cursor: pointer;
+                font-size: 15px;
+                &_text {
+                    width: 250px;
+                    z-index: 10;
+                    font-size: 12px;
+                    opacity: 0;
+                    background-color: $tertiary;
+                    padding: 15px;
+                    border-radius: 5px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    transform: translate(-30px, 30px);
+                    pointer-events: none;
+                }
+                &_button:hover ~ .subitem-description_text {
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+            &-price {
+                align-self: flex-end;
+                @include fluid-text(12px, 18px, 1, 991px, 1920px);
+            }
+        }
+    }
+}

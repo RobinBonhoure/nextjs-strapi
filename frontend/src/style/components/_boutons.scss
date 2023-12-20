@@ -1,0 +1,72 @@
+/*************************************************
+// BOUTONS
+*************************************************/
+
+.bouton,
+.bouton:focus {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    border-radius: 50vmax;
+    font-weight: bold;
+    height: 7rem;
+    @include fluid-text(15px, 20px, 1, 991px, 1920px);
+    background-color: $blanc;
+    color: $primary;
+    transition: all .3s ease;
+    cursor: pointer;
+
+    @media screen and (max-width:$screen-md) {
+        height: 50px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    &.float-right {
+        float: right;
+
+        @media screen and (max-width:$screen-md) {
+            float: none;
+        }
+    }
+
+    &:hover {
+
+        @media screen and (min-width:$screen-md) {
+            background-color: $secondary;
+            transition: all .3s ease;
+        }
+    }
+
+    &.v-primary {
+        background-color: $noir;
+        color: $secondary;
+
+        &:hover {
+
+            @media screen and (min-width:$screen-md) {
+                background-color: $secondary;
+                color: $primary;
+                transition: all .3s ease;
+            }
+        }
+    }
+
+    &.v-secondary {
+        background-color: $secondary;
+        color: $primary;
+
+        &:hover {
+
+            @media screen and (min-width:$screen-md) {
+                background-color: $primary;
+                color: $secondary;
+                transition: all .3s ease;
+            }
+        }
+    }
+}

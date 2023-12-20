@@ -1,0 +1,31 @@
+section[class^='blocks-'] {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @media screen and (min-width:$screen-md) {
+        padding-top: vw(100px);
+        padding-bottom: vw(100px);
+    }
+
+    .baseTitle {
+        @extend .h2;
+    }
+
+    .baseSubtitle {
+        @extend .h3;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .baseTitle,
+    .baseSubtitle,
+    .baseParagr {
+
+        @media screen and (min-width:$screen-md) {
+            max-width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

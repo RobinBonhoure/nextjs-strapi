@@ -1,0 +1,12 @@
+.social {
+    display: flex;
+    height: 100%;
+    gap: 15px;
+    @include fluid-text(14px, 18px, 1.4, 991px, 1920px);
+
+    @media screen and (max-width:$screen-md) {
+        align-self: center;
+        font-size: 18px;
+        gap: 25px;
+    }
+}

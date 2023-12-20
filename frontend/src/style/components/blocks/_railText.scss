@@ -1,0 +1,54 @@
+.blocks-rail_wrapper {
+    position: relative;
+    z-index: 11;
+    white-space: nowrap;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    transform: translateZ(0);
+    overflow: hidden;
+    width: 100%;
+    font-weight: bold;
+    @include fluid-text(150px, 250px, 1, 991px, 1920px);
+
+    .blocks-rail_group-container {
+        position: relative;
+        white-space: nowrap;
+        display: inline-flex;
+        width: auto;
+    }
+
+    .blocks-rail_track-container {
+        display: flex;
+        width: auto;
+        white-space: nowrap;
+        cursor: grab;
+    }
+
+    .blocks-rail_item,
+    .blocks-rail_track {
+        display: inline-block;
+    }
+
+    .blocks-rail_item {
+        user-select: none;
+        pointer-events: none;
+
+        span {
+            position: relative;
+            display: inline-block;
+            margin: 0 7.5rem;
+            padding: 1rem 0;
+        }
+    }
+
+    &.smallAndWhite {
+        color: $blanc;
+        @include fluid-text(55px, 70px, 1, 991px, 1920px);
+
+        .blocks-rail_item {
+            span {
+                margin: 0 1.5rem;
+            }
+        }
+    }
+}

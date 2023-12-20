@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_sections_image_texts",
+  "info": {
+    "displayName": "imageText",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "reverse": {
+      "type": "boolean",
+      "default": false
+    },
+    "full": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

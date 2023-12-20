@@ -1,0 +1,106 @@
+// * Container simple limité en largeur à partir de 992px
+.simple-container {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @media screen and (min-width:$screen-md) {
+        width: 85vw;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+// * Container de 12 colonnes grid, voir les class personnalisées en dessous
+.grid-container {
+    width: calc(100vw - 60px);
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+
+    @media screen and (min-width:$screen-md) {
+        width: 85vw;
+        column-gap: 30px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+// * Système de class pour une grille de 12 colonnes avec grid
+// * Exemple de class pour une div de 12 colonnes à partir de 992px > col-md-1-12
+
+// ? XS
+@for $i from 1 through 12 {
+    @for $j from 1 through 12 {
+        .col-xs-#{$i}-#{$j} {
+            position: relative;
+            grid-row-start: 1;
+            grid-column-start: #{$i};
+            grid-row-end: span 2;
+            grid-column-end: #{$j+1};
+        }
+    }
+}
+
+// ? SM
+@media (min-width: $screen-sm) {
+    @for $i from 1 through 12 {
+        @for $j from 1 through 12 {
+            .col-sm-#{$i}-#{$j} {
+                position: relative;
+                grid-row-start: 1;
+                grid-column-start: #{$i};
+                grid-row-end: span 2;
+                grid-column-end: #{$j+1};
+            }
+        }
+    }
+}
+
+// ? MD
+@media (min-width: $screen-md) {
+    @for $i from 1 through 12 {
+        @for $j from 1 through 12 {
+            .col-md-#{$i}-#{$j} {
+                position: relative;
+                grid-row-start: 1;
+                grid-column-start: #{$i};
+                grid-row-end: span 2;
+                grid-column-end: #{$j+1};
+            }
+        }
+    }
+}
+
+// ? LG
+@media (min-width: $screen-lg) {
+    @for $i from 1 through 12 {
+        @for $j from 1 through 12 {
+            .col-lg-#{$i}-#{$j} {
+                position: relative;
+                grid-row-start: 1;
+                grid-column-start: #{$i};
+                grid-row-end: span 2;
+                grid-column-end: #{$j+1};
+            }
+        }
+    }
+}
+
+// ? XL
+@media (min-width: $screen-xl) {
+    @for $i from 1 through 12 {
+        @for $j from 1 through 12 {
+            .col-xl-#{$i}-#{$j} {
+                position: relative;
+                grid-row-start: 1;
+                grid-column-start: #{$i};
+                grid-row-end: span 2;
+                grid-column-end: #{$j+1};
+            }
+        }
+    }
+}

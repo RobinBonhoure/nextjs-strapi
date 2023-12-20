@@ -1,0 +1,19 @@
+.c-modal {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 100;
+    background-color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    width: 400px;
+    &_close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 20px;
+    }
+}

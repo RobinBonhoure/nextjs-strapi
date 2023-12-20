@@ -1,0 +1,28 @@
+.c-formulaire {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    &_field {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    input, textarea {
+        font-family: var(--poppins);
+        background-color: $secondary;
+        width: 100%;
+        padding: 5px 15px;
+        border-radius: 15px;
+    }
+    .form-radio {
+        display: flex;
+        gap: 15px;
+        input {
+            width: 15px;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+/*************************************************
+// COULEURS DU SITE
+*************************************************/
+
+$blanc : #ffffff;
+$noir : #131313;
+$gris : #7a8285;
+
+$primary : #2d2d2d;
+$secondary : #ffffff;
+$tertiary : #7a8285;
+
+/*************************************************
+// CLASS COLORS
+*************************************************/
+
+.blanc {
+    color: $blanc !important;
+
+    &-bg {
+        background: $blanc;
+        color: inherit !important;
+    }
+}
+
+.gris {
+    color: $gris !important;
+
+    &-bg {
+        background: $gris;
+        color: inherit !important;
+    }
+}
+
+.noir {
+    color: $noir !important;
+
+    &-bg {
+        background: $noir;
+        color: inherit !important;
+    }
+}
+
+.primary {
+    color: $primary !important;
+
+    &-bg {
+        background: $primary;
+        color: inherit !important;
+    }
+}
+
+.secondary {
+    color: $secondary !important;
+
+    &-bg {
+        background: $secondary;
+        color: inherit !important;
+    }
+}

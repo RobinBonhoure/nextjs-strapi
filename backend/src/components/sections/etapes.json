@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_etapes",
+  "info": {
+    "displayName": "etapes",
+    "icon": "dashboard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "etapes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.single-etape"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  }
+}

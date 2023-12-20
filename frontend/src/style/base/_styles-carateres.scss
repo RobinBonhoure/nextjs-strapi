@@ -1,0 +1,93 @@
+/*************************************************
+// STYLES DE CARATERES
+*************************************************/
+
+.paragr,
+p {
+    @include fluid-text(14px, 20px, 1.4, 991px, 1920px);
+    font-weight: $regular;
+    margin: 0;
+
+    strong {
+        font-weight: $bold;
+    }
+
+    @media(max-width:$screen-md) {
+        font-size: 14px;
+    }
+}
+
+/*************************************************
+// TITRES H1/H2/H3
+*************************************************/
+
+
+.h1 {
+    margin: 0;
+    font-weight: $black;
+    @include fluid-text(44px, 64px, 1.4, 991px, 1920px);
+
+    @media screen and (max-width:$screen-md) {
+        font-size: 35px;
+
+        br {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:340px) {
+        font-size: 32px;
+    }
+}
+
+.h2 {
+    margin: 0;
+    font-weight: $black;
+    @include fluid-text(35px, 45px, 1.4, 991px, 1920px);
+
+    @media screen and (max-width:$screen-md) {
+        font-size: 30px;
+
+        br {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:340px) {
+        font-size: 28px;
+    }
+}
+
+.h3 {
+    margin: 0;
+    @include fluid-text(28px, 32px, 1.4, 991px, 1920px);
+
+    @media screen and (max-width:$screen-md) {
+        font-size: 28px;
+
+        br {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:340px) {
+        font-size: 25px;
+    }
+}
+
+.h4 {
+    margin: 0;
+    @include fluid-text(18px, 22px, 1.4, 991px, 1920px);
+
+    @media screen and (max-width:$screen-md) {
+        font-size: 22px;
+
+        br {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:340px) {
+        font-size: 20px;
+    }
+}

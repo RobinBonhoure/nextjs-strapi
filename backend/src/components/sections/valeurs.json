@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_sections_valeurs",
+  "info": {
+    "displayName": "valeurs"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "richtext"
+    },
+    "valeurs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.valeur"
+    }
+  }
+}

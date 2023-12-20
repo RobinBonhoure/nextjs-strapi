@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_menus",
+  "info": {
+    "displayName": "Menu",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "page": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page.page"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_sections_rail_texts",
+  "info": {
+    "displayName": "railText"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "separator": {
+      "type": "string"
+    }
+  }
+}
